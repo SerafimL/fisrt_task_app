@@ -14,14 +14,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String labelText = 'Hello Dude!';
+  String _labelText = 'Hello Dude!';
 
   _buttonPressed() {
     setState(() {
-      labelText = labelText == 'Hello Dude!' ? 'goodbye fella!' : 'Hello Dude!';
+      _labelText =
+          _labelText == 'Hello Dude!' ? 'goodbye fella!' : 'Hello Dude!';
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
@@ -31,7 +33,7 @@ class _MyAppState extends State<MyApp> {
             body: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextLabel(labelText),
+                TextLabel(_labelText),
                 TextControl(_buttonPressed),
               ],
             )));

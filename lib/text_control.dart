@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextControl extends StatelessWidget {
-  VoidCallback buttonPressed;
+  final VoidCallback buttonPressed;
 
   TextControl(this.buttonPressed);
 
